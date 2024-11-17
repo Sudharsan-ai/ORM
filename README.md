@@ -25,17 +25,24 @@ Execute Django admin and create details for 10 books
 1.models.py
 
 from django.db import models
+
 from django.contrib import admin
 
 class Bank_Loan(models.Model):
+
     loan_id = models.CharField(max_length=20,primary_key=True)
+
     loan_type = models.CharField(max_length=30)
+
     loan_amd = models.FloatField()
+
     cust_acno = models.IntegerField()
+
     cust_name = models.CharField(max_length=50)
 
 
 class Bank_LoanAdmin(admin.ModelAdmin):
+
     list_display = ('loan_id', 'loan_type','loan_amd','cust_acno','cust_name')
 
 2.admin.py
@@ -51,6 +58,7 @@ admin.site.register( Bank_Loan,Bank_LoanAdmin)
 ## OUTPUT
 
 Include the screenshot of your admin page.
+
 ![alt text](<Screenshot 2024-11-17 232152.png>)
 
 
