@@ -41,6 +41,7 @@ class Bank_LoanAdmin(admin.ModelAdmin):
 2.admin.py
 
 from django.contrib import admin
+
 from.models import Bank_Loan, Bank_LoanAdmin
 
 
